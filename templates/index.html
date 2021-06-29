@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Records History</title>
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <link rel="icon" href="{% static 'images/logo.png' %}" type="image/png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  </head>
+
+  <body>
+    <section id="title" >
+
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-dark ">
+        <a class="navbar-brand "href="" style="font-family: 'Acme', sans-serif;"> ROOT2AI </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link "href="">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link "href="">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link "href="">Contact Us</a>
+          </li>
+        </ul>
+        </div>
+      </nav>
+    </div>
+    </section>
+<br>
+<h1 align='center'>School Records</h1>
+<div class="custable" style="overflow-x:auto;">
+  {% if records %}
+    <table class="table table-hover">
+      <thead class="thead-dark">
+        <tr>
+        <th style="padding-left:50px;padding-right:40px;" class="align-middle" > Name of the Board<th>
+        <th class="align-middle" >Open Schooling-All Categories - Number of Students - Appeared - Boys<th>
+        <th class="align-middle">Open Schooling-All Categories - Number of Students - Appeared - Girls	<th>
+        <th class="align-middle">Open Schooling-All Categories - Number of Students - Appeared - Total	<th>
+        <th class="align-middle">Open Schooling-All Categories - Number of Students - Passed - Boys<th>
+        <th class="align-middle">Open Schooling-All Categories - Number of Students - Passed - Girls<th>
+        <th class="align-middle">Open Schooling-All Categories - Number of Students - Passed - Total	<th>
+        <th>Open Schooling-Scheduled Caste Students - Number of Students - Appeared - Boys<th>
+        <th>Open Schooling-Scheduled Caste Students - Number of Students - Appeared - Girls<th>
+        <th>Open Schooling-Scheduled Caste Students - Number of Students - Appeared - Total	<th>
+        <th>Open Schooling-Scheduled Caste Students - Number of Students - Passed - Boys<th>
+        <th>Open Schooling-Scheduled Caste Students - Number of Students - Passed - Girls	<th>
+        <th>Open Schooling-Scheduled Caste Students - Number of Students - Passed - Total	<th>
+        <th>Open Schooling-Scheduled Tribe Students - Number of Students - Appeared - Boys<th>
+        <th>Open Schooling-Scheduled Tribe Students - Number of Students - Appeared - Girls<th>
+        <th>Open Schooling-Scheduled Tribe Students - Number of Students - Appeared - Total	<th>
+        <th>Open Schooling-Scheduled Tribe Students - Number of Students - Passed - Boys<th>
+        <th>Open Schooling-Scheduled Tribe Students - Number of Students - Passed - Girls	<th>
+        <th>Open Schooling-Scheduled Tribe Students - Number of Students - Passed - Total	</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for rec in records %}
+        <tr>
+          <th colspan="2" style="padding-left:15px;text-align:center;">{{rec.a}}</td>
+          <td colspan="2" class="align-middle">{{rec.b}}</td>
+          <td colspan="2" class="align-middle">{{rec.c}}</td>
+          <td colspan="2" class="align-middle">{{rec.d}}</td>
+          <td colspan="2"class="align-middle">{{rec.e}}</td>
+          <td colspan="2" class="align-middle">{{rec.f}}</td>
+          <td colspan="2" class="align-middle">{{rec.g}}</td>
+          <td colspan="2" class="align-middle">{{rec.h}}</td>
+          <td colspan="2" class="align-middle">{{rec.i}}</td>
+          <td colspan="2" class="align-middle">{{rec.j}}</td>
+          <td colspan="2" class="align-middle">{{rec.k}}</td>
+          <td colspan="2" class="align-middle">{{rec.l}}</td>
+          <td colspan="2" class="align-middle">{{rec.m}}</td>
+          <td colspan="2" class="align-middle">{{rec.n}}</td>
+          <td colspan="2" class="align-middle">{{rec.o}}</td>
+          <td colspan="2" class="align-middle">{{rec.p}}</td>
+          <td colspan="2" class="align-middle">{{rec.q}}</td>
+          <td colspan="2" class="align-middle">{{rec.r}}</td>
+          <td colspan="2" class="align-middle">{{rec.s}}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+    </table>
+    {% else %}
+      <p>No Records Found</p>
+  {% endif %}
+</div>
+</body>
+</html>
